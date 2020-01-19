@@ -1,17 +1,10 @@
 extends Node2D
 
 var stats = {
-	level = 1, 
-	experience = 0,
-	health = 1, 
-	mana = 0, 
-	condition = 0, 
-	damage = 0,
-	critical_chance = 0, 
-	evasion_chance = 0,
-	armour = 0, 
-	speed = 0, 
-	lifesteal = 0
+	level = 1, experience = 0,
+	health = 1, mana = 0, condition = 0, 
+	damage = 0, armour = 0, speed = 0,
+	critical_chance = 0, evasion_chance = 0, lifesteal = 0
 }
 
 var cooldown
