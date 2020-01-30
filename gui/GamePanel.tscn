@@ -44,7 +44,7 @@ bg_color = Color( 1, 0.937255, 0.592157, 1 )
 [node name="LevelPanel" type="ColorRect"]
 margin_right = 360.0
 margin_bottom = 640.0
-color = Color( 0.4, 0.278431, 0.278431, 1 )
+color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

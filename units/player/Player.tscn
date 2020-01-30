@@ -56,12 +56,14 @@ anims/attack = ExtResource( 4 )
 anims/stun = ExtResource( 5 )
 anims/take_damage = ExtResource( 6 )
 
-[node name="AttackInfo" type="Node2D" parent="."]
+[node name="Info" type="Node2D" parent="."]
+
+[node name="Attack" type="Node2D" parent="Info"]
 position = Vector2( -20, -20 )
 scale = Vector2( 0.2, 0.2 )
 script = ExtResource( 8 )
 
-[node name="Label" type="Label" parent="AttackInfo"]
+[node name="Label" type="Label" parent="Info/Attack"]
 margin_top = -19.5
 margin_bottom = 19.5
 size_flags_horizontal = 5
@@ -73,19 +75,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Tween" type="Tween" parent="AttackInfo"]
+[node name="Tween" type="Tween" parent="Info/Attack"]
 
-[node name="Timer" type="Timer" parent="AttackInfo"]
+[node name="Timer" type="Timer" parent="Info/Attack"]
 wait_time = 0.5
 one_shot = true
 autostart = true
 
-[node name="TakeDamageInfo" type="Node2D" parent="."]
+[node name="TakeDamage" type="Node2D" parent="Info"]
 position = Vector2( -55, -20 )
 scale = Vector2( 1.1, 1.1 )
 script = ExtResource( 9 )
 
-[node name="Label" type="Label" parent="TakeDamageInfo"]
+[node name="Label" type="Label" parent="Info/TakeDamage"]
 margin_left = -50.0
 margin_top = -19.5
 margin_right = 50.0
@@ -101,14 +103,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Tween" type="Tween" parent="TakeDamageInfo"]
+[node name="Tween" type="Tween" parent="Info/TakeDamage"]
 
-[node name="Timer" type="Timer" parent="TakeDamageInfo"]
+[node name="Timer" type="Timer" parent="Info/TakeDamage"]
 
-[node name="HealInfo" type="Node2D" parent="."]
+[node name="Heal" type="Node2D" parent="Info"]
 script = ExtResource( 7 )
 
-[node name="Label" type="Label" parent="HealInfo"]
+[node name="Label" type="Label" parent="Info/Heal"]
 margin_left = -75.0
 margin_right = -26.0
 margin_bottom = 39.0
@@ -121,6 +123,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Tween" type="Tween" parent="HealInfo"]
+[node name="Tween" type="Tween" parent="Info/Heal"]
 
-[node name="Timer" type="Timer" parent="HealInfo"]
+[node name="Timer" type="Timer" parent="Info/Heal"]

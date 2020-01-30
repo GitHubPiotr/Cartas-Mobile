@@ -9,11 +9,13 @@ var stats = {
 
 var cooldown
 var fixed_damage
+var max_health
 
 signal reset_cooldown
 signal attack
 
 func _ready():
+	max_health = stats.health
 	connect("reset_cooldown", self, "_reset_cooldown")
 	connect("attack", self, "_attack")
 
@@ -47,6 +49,8 @@ func _take_damage(fixed_damage):
 
 func _heal(lifesteal_value):
 	stats.health += lifesteal_value
+	if stats.health > max_health:
+		stats.health = max_health
 
 func set_stats(level, experience, health, mana, condition, damage, 
 	critical_chance, evasion_chance, armour, speed, lifesteal):

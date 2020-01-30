@@ -19,17 +19,22 @@ func init(level, experience, health, mana, condition, damage,
 		cooldown = Game.COOLDOWN
 
 func _attack(target):
-	print(stats.damage, " ", self.name)
 	._attack(target)
+	change_condition()
 	if fixed_damage == 0: fixed_damage = "miss"
-	$AttackInfo.show_damage(fixed_damage)
+	$Info/Attack.show_damage(fixed_damage)
 
 func _take_damage(fixed_damage):
 	._take_damage(fixed_damage)
-	$TakeDamageInfo.show_take_damage(fixed_damage)
+	$Info/TakeDamage.show_take_damage(fixed_damage)
 	Game.GET_NODE_FROM_REFERENCE_LIST("HealthBar").emit_signal("set_health", stats.health)
 
 func _heal(lifesteal_value):
 	._heal(lifesteal_value)
-	$HealInfo.show_heal(lifesteal_value)
+	$Info/Heal.show_heal(lifesteal_value)
 	Game.GET_NODE_FROM_REFERENCE_LIST("HealthBar").emit_signal("set_health", stats.health)
+
+func change_condition():
+	stats.condition -= 1
+	if stats.condition <= 0:
+		print("condition")
