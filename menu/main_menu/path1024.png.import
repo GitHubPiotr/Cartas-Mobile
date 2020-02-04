@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rect10.png-49da1f18afb168ebc0ce7d1665eb362d.stex"
+path="res://.import/path1024.png-6fa372ff4be72343f6c01454321212c4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/rect10.png"
-dest_files=[ "res://.import/rect10.png-49da1f18afb168ebc0ce7d1665eb362d.stex" ]
+source_file="res://menu/main_menu/path1024.png"
+dest_files=[ "res://.import/path1024.png-6fa372ff4be72343f6c01454321212c4.stex" ]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
-flags/mipmaps=false
+flags/mipmaps=true
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true

@@ -13,10 +13,10 @@ func _ready():
 	var panel_layout = $PanelLayout
 	
 	var player = Player.instance()
-	player.init(1, 1, 1001, 50, 10, 222, 0.10, 0.10, 10, 200, 0.1)
+	player.init(1, 1, 1000, 50, 10, 222, 0.10, 0.10, 10, 200, 0.1)
 	player.global_position = Vector2(225, 375)
 	add_child(player)
 	
 	var combat_mechanism = CombatMechanism.instance()
-	combat_mechanism.init(player, Dog, 2)
+	combat_mechanism.init(player, Dog, 5)
 	add_child(combat_mechanism)

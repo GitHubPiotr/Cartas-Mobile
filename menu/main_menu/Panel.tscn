@@ -1,22 +1,33 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://menu/path1024.png" type="Texture" id=1]
-[ext_resource path="res://menu/rysunek-5.png" type="Texture" id=2]
-[ext_resource path="res://menu/path312.png" type="Texture" id=3]
-[ext_resource path="res://menu/rysunek-8.png" type="Texture" id=4]
-[ext_resource path="res://menu/rysunek-4.png" type="Texture" id=5]
-[ext_resource path="res://menu/Panel.gd" type="Script" id=6]
-[ext_resource path="res://units/extra/bright.shader" type="Shader" id=7]
+[ext_resource path="res://units/extra/bright.shader" type="Shader" id=1]
+[ext_resource path="res://menu/main_menu/Panel.gd" type="Script" id=2]
+[ext_resource path="res://menu/main_menu/rysunek-8.png" type="Texture" id=3]
+[ext_resource path="res://menu/main_menu/rysunek-5.png" type="Texture" id=4]
+[ext_resource path="res://fonts/FiraGO-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://menu/main_menu/rysunek-4.png" type="Texture" id=6]
+[ext_resource path="res://menu/main_menu/path1024.png" type="Texture" id=7]
+[ext_resource path="res://menu/main_menu/path312.png" type="Texture" id=8]
 
-[sub_resource type="ShaderMaterial" id=1]
-shader = ExtResource( 7 )
+[sub_resource type="DynamicFont" id=1]
+size = 32
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 1, 0.937255, 0.592157, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 1 )
 shader_param/bright_amount = 0.0
 
 [node name="Panel" type="ColorRect"]
 margin_right = 360.0
 margin_bottom = 640.0
 color = Color( 0, 0, 0, 1 )
-script = ExtResource( 6 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -43,7 +54,7 @@ rect_min_size = Vector2( 85, 85 )
 [node name="Sprite" type="Sprite" parent="PanelLayout/TopContainer/Panel"]
 position = Vector2( 42.8568, 42.2266 )
 scale = Vector2( 0.15, 0.15 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelLayout/TopContainer"]
 margin_left = 89.0
@@ -58,12 +69,34 @@ margin_bottom = 40.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="Nickname" type="Label" parent="PanelLayout/TopContainer/VBoxContainer/Panel"]
+margin_right = 263.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 1 )
+text = "Nickname"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Panel2" type="Panel" parent="PanelLayout/TopContainer/VBoxContainer"]
 margin_top = 44.0
 margin_right = 263.0
 margin_bottom = 85.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="Exp" type="ProgressBar" parent="PanelLayout/TopContainer/VBoxContainer/Panel2"]
+margin_right = 263.0
+margin_bottom = 41.0
+custom_styles/fg = SubResource( 2 )
+custom_styles/bg = SubResource( 3 )
+value = 50.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Buttons" type="GridContainer" parent="PanelLayout"]
 margin_top = 89.0
@@ -74,7 +107,7 @@ size_flags_vertical = 3
 columns = 2
 
 [node name="Character" type="Panel" parent="PanelLayout/Buttons"]
-material = SubResource( 1 )
+material = SubResource( 4 )
 margin_right = 174.0
 margin_bottom = 225.0
 size_flags_horizontal = 3
@@ -84,7 +117,7 @@ size_flags_vertical = 3
 use_parent_material = true
 position = Vector2( 29.8758, 38.2535 )
 scale = Vector2( 0.21, 0.21 )
-texture = ExtResource( 1 )
+texture = ExtResource( 7 )
 centered = false
 
 [node name="Map" type="Panel" parent="PanelLayout/Buttons"]
@@ -97,7 +130,7 @@ size_flags_vertical = 3
 [node name="Sprite" type="Sprite" parent="PanelLayout/Buttons/Map"]
 position = Vector2( 87.2891, 119.186 )
 scale = Vector2( 0.26, 0.26 )
-texture = ExtResource( 3 )
+texture = ExtResource( 8 )
 
 [node name="Upgrade" type="Panel" parent="PanelLayout/Buttons"]
 margin_top = 229.0
@@ -109,7 +142,7 @@ size_flags_vertical = 3
 [node name="Sprite" type="Sprite" parent="PanelLayout/Buttons/Upgrade"]
 position = Vector2( 84.7139, 114.18 )
 scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 
 [node name="Alchemy" type="Panel" parent="PanelLayout/Buttons"]
 margin_left = 178.0
@@ -122,7 +155,7 @@ size_flags_vertical = 3
 [node name="Sprite" type="Sprite" parent="PanelLayout/Buttons/Alchemy"]
 position = Vector2( 87.8568, 114.497 )
 scale = Vector2( 0.23, 0.23 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 
 [node name="VBoxContainer3" type="HBoxContainer" parent="PanelLayout"]
 margin_top = 547.0
