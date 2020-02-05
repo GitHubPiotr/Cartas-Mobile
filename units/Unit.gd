@@ -15,7 +15,6 @@ signal reset_cooldown
 signal attack
 
 func _ready():
-	max_health = stats.health
 	connect("reset_cooldown", self, "_reset_cooldown")
 	connect("attack", self, "_attack")
 
@@ -45,6 +44,7 @@ func _attack(target):
 
 func _take_damage(fixed_damage):
 	stats.health -= fixed_damage
+	if stats.health < 0: stats.health = 0
 	$Sprite/Animation.queue("take_damage")
 
 func _heal(lifesteal_value):
@@ -52,6 +52,9 @@ func _heal(lifesteal_value):
 	if stats.health > max_health:
 		stats.health = max_health
 
+
+
+"""
 func set_stats(level, experience, health, mana, condition, damage, 
 	critical_chance, evasion_chance, armour, speed, lifesteal):
 		
@@ -65,3 +68,4 @@ func set_stats(level, experience, health, mana, condition, damage,
 		stats.armour = armour
 		stats.speed = speed
 		stats.lifesteal = lifesteal
+"""

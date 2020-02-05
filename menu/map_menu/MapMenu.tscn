@@ -1,13 +1,8 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
 
-[node name="MapMenu" type="ColorRect"]
-margin_right = 360.0
-margin_bottom = 640.0
-color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[ext_resource path="res://menu/map_menu/Panel.tscn" type="PackedScene" id=2]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_right = 360.0
-margin_bottom = 640.0
+[node name="MapMenu" type="Node"]
+
+[node name="MapMenu" parent="." instance=ExtResource( 2 )]
+script = null

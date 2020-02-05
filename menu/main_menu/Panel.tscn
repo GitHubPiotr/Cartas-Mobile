@@ -1,13 +1,14 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://units/extra/bright.shader" type="Shader" id=1]
-[ext_resource path="res://menu/main_menu/Panel.gd" type="Script" id=2]
+[ext_resource path="res://menu/main_menu/Character.gd" type="Script" id=2]
 [ext_resource path="res://menu/main_menu/rysunek-8.png" type="Texture" id=3]
 [ext_resource path="res://menu/main_menu/rysunek-5.png" type="Texture" id=4]
 [ext_resource path="res://fonts/FiraGO-Regular.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://menu/main_menu/rysunek-4.png" type="Texture" id=6]
 [ext_resource path="res://menu/main_menu/path1024.png" type="Texture" id=7]
 [ext_resource path="res://menu/main_menu/path312.png" type="Texture" id=8]
+[ext_resource path="res://menu/main_menu/Map.gd" type="Script" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -23,11 +24,14 @@ bg_color = Color( 1, 0.937255, 0.592157, 1 )
 shader = ExtResource( 1 )
 shader_param/bright_amount = 0.0
 
+[sub_resource type="ShaderMaterial" id=5]
+shader = ExtResource( 1 )
+shader_param/bright_amount = 0.0
+
 [node name="Panel" type="ColorRect"]
 margin_right = 360.0
 margin_bottom = 640.0
 color = Color( 0, 0, 0, 1 )
-script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -112,6 +116,7 @@ margin_right = 174.0
 margin_bottom = 225.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="PanelLayout/Buttons/Character"]
 use_parent_material = true
@@ -120,17 +125,24 @@ scale = Vector2( 0.21, 0.21 )
 texture = ExtResource( 7 )
 centered = false
 
+[node name="Tween" type="Tween" parent="PanelLayout/Buttons/Character"]
+
 [node name="Map" type="Panel" parent="PanelLayout/Buttons"]
+material = SubResource( 5 )
 margin_left = 178.0
 margin_right = 352.0
 margin_bottom = 225.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource( 9 )
 
 [node name="Sprite" type="Sprite" parent="PanelLayout/Buttons/Map"]
+use_parent_material = true
 position = Vector2( 87.2891, 119.186 )
 scale = Vector2( 0.26, 0.26 )
 texture = ExtResource( 8 )
+
+[node name="Tween" type="Tween" parent="PanelLayout/Buttons/Map"]
 
 [node name="Upgrade" type="Panel" parent="PanelLayout/Buttons"]
 margin_top = 229.0
@@ -144,6 +156,8 @@ position = Vector2( 84.7139, 114.18 )
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 4 )
 
+[node name="Tween" type="Tween" parent="PanelLayout/Buttons/Upgrade"]
+
 [node name="Alchemy" type="Panel" parent="PanelLayout/Buttons"]
 margin_left = 178.0
 margin_top = 229.0
@@ -156,6 +170,8 @@ size_flags_vertical = 3
 position = Vector2( 87.8568, 114.497 )
 scale = Vector2( 0.23, 0.23 )
 texture = ExtResource( 3 )
+
+[node name="Tween" type="Tween" parent="PanelLayout/Buttons/Alchemy"]
 
 [node name="VBoxContainer3" type="HBoxContainer" parent="PanelLayout"]
 margin_top = 547.0
@@ -191,4 +207,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Tween" type="Tween" parent="."]
-[connection signal="gui_input" from="PanelLayout/Buttons/Character" to="." method="_on_Character_gui_input"]
+[connection signal="gui_input" from="PanelLayout/Buttons/Character" to="PanelLayout/Buttons/Character" method="_on_Character_gui_input"]
+[connection signal="gui_input" from="PanelLayout/Buttons/Map" to="PanelLayout/Buttons/Map" method="_on_Map_gui_input"]
+[connection signal="tween_all_completed" from="PanelLayout/Buttons/Map/Tween" to="PanelLayout/Buttons/Map" method="_on_Tween_tween_all_completed"]

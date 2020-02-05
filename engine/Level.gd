@@ -13,7 +13,7 @@ func _ready():
 	var panel_layout = $PanelLayout
 	
 	var player = Player.instance()
-	player.init(1, 1, 1000, 50, 10, 222, 0.10, 0.10, 10, 200, 0.1)
+	player.init(1, 1, 1000, 50, 10, 50, 0.10, 0.10, 10, 200, 0.1)
 	player.global_position = Vector2(225, 375)
 	add_child(player)
 	

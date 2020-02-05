@@ -16,6 +16,7 @@ func init(level, experience, health, mana, condition, damage,
 		stats.armour = armour
 		stats.speed = speed
 		stats.lifesteal = lifesteal
+		max_health = stats.health
 		cooldown = Game.COOLDOWN
 
 func _attack(target):
