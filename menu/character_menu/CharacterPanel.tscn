@@ -1,0 +1,145 @@
+[gd_scene load_steps=7 format=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 0, 0, 1 )
+
+[node name="CharacterPanel" type="CenterContainer"]
+margin_right = 360.0
+margin_bottom = 252.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = 54.0
+margin_right = 306.0
+margin_bottom = 252.0
+columns = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WeaponPanel" type="Panel" parent="GridContainer"]
+margin_right = 60.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 60, 60 )
+
+[node name="HelmetPanel" type="Panel" parent="GridContainer"]
+margin_left = 64.0
+margin_right = 124.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 60, 60 )
+
+[node name="EmptyPanel" type="Panel" parent="GridContainer"]
+margin_left = 128.0
+margin_right = 188.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 60, 60 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="EmptyPanel2" type="Panel" parent="GridContainer"]
+margin_left = 192.0
+margin_right = 252.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 60, 60 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="WeaponPanel2" type="Panel" parent="GridContainer"]
+margin_top = 64.0
+margin_right = 60.0
+margin_bottom = 124.0
+rect_min_size = Vector2( 60, 60 )
+
+[node name="ArmourPanel" type="Panel" parent="GridContainer"]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 124.0
+margin_bottom = 124.0
+rect_min_size = Vector2( 60, 60 )
+
+[node name="ShieldPanel" type="Panel" parent="GridContainer"]
+margin_left = 128.0
+margin_top = 64.0
+margin_right = 188.0
+margin_bottom = 124.0
+rect_min_size = Vector2( 60, 60 )
+
+[node name="NecklacePanel" type="Panel" parent="GridContainer"]
+margin_left = 192.0
+margin_top = 64.0
+margin_right = 252.0
+margin_bottom = 124.0
+rect_min_size = Vector2( 60, 60 )
+
+[node name="EmptyPanel3" type="Panel" parent="GridContainer"]
+modulate = Color( 0, 0, 0, 1 )
+margin_top = 128.0
+margin_right = 60.0
+margin_bottom = 188.0
+rect_min_size = Vector2( 60, 60 )
+custom_styles/panel = SubResource( 6 )
+
+[node name="ArmourPanel2" type="Panel" parent="GridContainer"]
+margin_left = 64.0
+margin_top = 128.0
+margin_right = 124.0
+margin_bottom = 188.0
+rect_min_size = Vector2( 60, 60 )
+
+[node name="BraceletPanel" type="Panel" parent="GridContainer"]
+margin_left = 128.0
+margin_top = 128.0
+margin_right = 188.0
+margin_bottom = 188.0
+rect_min_size = Vector2( 60, 60 )
+
+[node name="EarringsPanel" type="Panel" parent="GridContainer"]
+margin_left = 192.0
+margin_top = 128.0
+margin_right = 252.0
+margin_bottom = 188.0
+rect_min_size = Vector2( 60, 60 )
+
+[node name="EmptyPanel4" type="Panel" parent="GridContainer"]
+margin_top = 192.0
+margin_right = 60.0
+margin_bottom = 252.0
+rect_min_size = Vector2( 60, 60 )
+custom_styles/panel = SubResource( 3 )
+
+[node name="BootsPanel" type="Panel" parent="GridContainer"]
+margin_left = 64.0
+margin_top = 192.0
+margin_right = 124.0
+margin_bottom = 252.0
+rect_min_size = Vector2( 60, 60 )
+
+[node name="EmptyPanel5" type="Panel" parent="GridContainer"]
+margin_left = 128.0
+margin_top = 192.0
+margin_right = 188.0
+margin_bottom = 252.0
+rect_min_size = Vector2( 60, 60 )
+custom_styles/panel = SubResource( 4 )
+
+[node name="EmptyPanel6" type="Panel" parent="GridContainer"]
+margin_left = 192.0
+margin_top = 192.0
+margin_right = 252.0
+margin_bottom = 252.0
+rect_min_size = Vector2( 60, 60 )
+custom_styles/panel = SubResource( 5 )
