@@ -55,10 +55,17 @@ margin_right = 85.0
 margin_bottom = 85.0
 rect_min_size = Vector2( 85, 85 )
 
-[node name="Sprite" type="Sprite" parent="PanelLayout/TopContainer/Panel"]
-position = Vector2( 42.8568, 42.2266 )
-scale = Vector2( 0.15, 0.15 )
+[node name="Logo" type="TextureRect" parent="PanelLayout/TopContainer/Panel"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 75.0
+margin_bottom = 75.0
 texture = ExtResource( 6 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelLayout/TopContainer"]
 margin_left = 89.0
@@ -118,12 +125,18 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="PanelLayout/Buttons/Character"]
+[node name="Texture" type="TextureRect" parent="PanelLayout/Buttons/Character"]
 use_parent_material = true
-position = Vector2( 29.8758, 38.2535 )
-scale = Vector2( 0.21, 0.21 )
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 144.0
+margin_bottom = 195.0
 texture = ExtResource( 7 )
-centered = false
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Tween" type="Tween" parent="PanelLayout/Buttons/Character"]
 
@@ -136,11 +149,18 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 9 )
 
-[node name="Sprite" type="Sprite" parent="PanelLayout/Buttons/Map"]
+[node name="Texture" type="TextureRect" parent="PanelLayout/Buttons/Map"]
 use_parent_material = true
-position = Vector2( 87.2891, 119.186 )
-scale = Vector2( 0.26, 0.26 )
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 154.0
+margin_bottom = 205.0
 texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Tween" type="Tween" parent="PanelLayout/Buttons/Map"]
 
@@ -151,10 +171,17 @@ margin_bottom = 454.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Sprite" type="Sprite" parent="PanelLayout/Buttons/Upgrade"]
-position = Vector2( 84.7139, 114.18 )
-scale = Vector2( 0.4, 0.4 )
+[node name="Texture" type="TextureRect" parent="PanelLayout/Buttons/Upgrade"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 154.0
+margin_bottom = 205.0
 texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Tween" type="Tween" parent="PanelLayout/Buttons/Upgrade"]
 
@@ -166,10 +193,16 @@ margin_bottom = 454.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Sprite" type="Sprite" parent="PanelLayout/Buttons/Alchemy"]
-position = Vector2( 87.8568, 114.497 )
-scale = Vector2( 0.23, 0.23 )
+[node name="Texture" type="TextureRect" parent="PanelLayout/Buttons/Alchemy"]
+margin_left = 20.0
+margin_top = 50.0
+margin_right = 154.0
+margin_bottom = 175.0
 texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Tween" type="Tween" parent="PanelLayout/Buttons/Alchemy"]
 

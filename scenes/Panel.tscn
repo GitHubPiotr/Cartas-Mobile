@@ -1,0 +1,33 @@
+[gd_scene format=2]
+
+[node name="Panel" type="ColorRect"]
+margin_right = 360.0
+margin_bottom = 640.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelLayout" type="VBoxContainer" parent="."]
+margin_right = 360.0
+margin_bottom = 639.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelLayout"]
+margin_right = 360.0
+margin_bottom = 85.0
+rect_min_size = Vector2( 0, 85 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelLayout"]
+margin_top = 89.0
+margin_right = 360.0
+margin_bottom = 550.0
+size_flags_vertical = 3
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="PanelLayout"]
+margin_top = 554.0
+margin_right = 360.0
+margin_bottom = 639.0
+rect_min_size = Vector2( 0, 85 )

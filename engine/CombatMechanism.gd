@@ -18,7 +18,7 @@ func _init():
 	amount = 0
 
 func _ready():
-	Game.ADD_NODE_TO_REFERENCE_LIST(self)
+	Game.ADD_NODE(self)
 	connect("respawn_enemy", self, "_respawn_enemy")
 	connect("kill_enemy", self, "_kill_enemy")
 	emit_signal("respawn_enemy")

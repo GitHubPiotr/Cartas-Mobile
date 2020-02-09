@@ -22,10 +22,13 @@ func _on_Map_gui_input(event):
 			#character_clicked = true
 			$Tween.interpolate_property(self.get_material(), 
 				\"shader_param/bright_amount\", 
-				0, 1, 0.5, 
-				Tween.TRANS_CUBIC, Tween.EASE_OUT)
+				0, 1, 0.2, Tween.TRANS_CUBIC, Tween.EASE_OUT)
 			$Tween.start()
 	#else: character_clicked = false
+
+
+func _on_Tween_tween_all_completed():
+	get_tree().change_scene(\"res://engine/Level.tscn\")
 "
 
 [sub_resource type="DynamicFont" id=4]
@@ -65,8 +68,7 @@ func _on_Map_gui_input(event):
 			#character_clicked = true
 			$Tween.interpolate_property(self.get_material(), 
 				\"shader_param/bright_amount\", 
-				0, 1, 0.5, 
-				Tween.TRANS_CUBIC, Tween.EASE_OUT)
+				0, 1, 0.2, Tween.TRANS_CUBIC, Tween.EASE_OUT)
 			$Tween.start()
 	#else: character_clicked = false
 "
@@ -229,6 +231,7 @@ margin_right = 360.0
 margin_bottom = 640.0
 rect_min_size = Vector2( 0, 85 )
 [connection signal="gui_input" from="PanelLayout/MapPanel/Map" to="PanelLayout/MapPanel/Map" method="_on_Map_gui_input"]
+[connection signal="tween_all_completed" from="PanelLayout/MapPanel/Map/Tween" to="PanelLayout/MapPanel/Map" method="_on_Tween_tween_all_completed"]
 [connection signal="gui_input" from="PanelLayout/MapPanel/Map2" to="PanelLayout/MapPanel/Map2" method="_on_Map_gui_input"]
 [connection signal="gui_input" from="PanelLayout/MapPanel/Map3" to="PanelLayout/MapPanel/Map3" method="_on_Map_gui_input"]
 [connection signal="gui_input" from="PanelLayout/MapPanel/Map4" to="PanelLayout/MapPanel/Map4" method="_on_Map_gui_input"]

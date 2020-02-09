@@ -5,6 +5,3 @@
 [node name="MainMenu" type="Node"]
 
 [node name="Panel" parent="." instance=ExtResource( 1 )]
-script = null
-
-[node name="Tween" type="Tween" parent="."]

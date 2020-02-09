@@ -3,7 +3,7 @@ extends ProgressBar
 signal set_health
 
 func _ready():
-	Game.ADD_NODE_TO_REFERENCE_LIST(self)
+	Game.ADD_NODE(self)
 	connect("set_health", self, "_set_health")
 
 func init(enemy):

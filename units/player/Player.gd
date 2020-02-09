@@ -1,7 +1,7 @@
 extends "res://units/Unit.gd"
 
 func _ready():
-	Game.GET_NODE_FROM_REFERENCE_LIST("HealthBar").init(self)
+	Game.GET_NODE("HealthBar").init(self)
 
 func init(level, experience, health, mana, condition, damage, 
 	critical_chance, evasion_chance, armour, speed, lifesteal):
@@ -28,12 +28,12 @@ func _attack(target):
 func _take_damage(fixed_damage):
 	._take_damage(fixed_damage)
 	$Info/TakeDamage.show_take_damage(fixed_damage)
-	Game.GET_NODE_FROM_REFERENCE_LIST("HealthBar").emit_signal("set_health", stats.health)
+	Game.GET_NODE("HealthBar").emit_signal("set_health", stats.health)
 
 func _heal(lifesteal_value):
 	._heal(lifesteal_value)
 	$Info/Heal.show_heal(lifesteal_value)
-	Game.GET_NODE_FROM_REFERENCE_LIST("HealthBar").emit_signal("set_health", stats.health)
+	Game.GET_NODE("HealthBar").emit_signal("set_health", stats.health)
 
 func change_condition():
 	stats.condition -= 1

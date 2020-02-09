@@ -1,6 +1,6 @@
 extends Node2D
 
-var armour
+var slots
 
 func _ready():
-	armour = 50
+	slots = 1
