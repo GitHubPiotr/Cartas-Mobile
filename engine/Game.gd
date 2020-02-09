@@ -1,8 +1,9 @@
 extends Node
 
-const GAMNE_WIDTH = 123
-const GAMNE_HEIGHT = 123
+#const GAMNE_WIDTH = 123
+#const GAMNE_HEIGHT = 123
 
+const EQ_SLOT_SIZE = Vector2(27.5, 27.5)
 const COOLDOWN = 1000
 
 var node_references

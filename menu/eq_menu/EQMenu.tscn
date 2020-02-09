@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://menu/eq_menu/Items.gd" type="Script" id=1]
 [ext_resource path="res://menu/eq_menu/Panel.tscn" type="PackedScene" id=2]
 [ext_resource path="res://items/armours/armour1/Armour1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://menu/eq_menu/EQMenu.gd" type="Script" id=4]
 [ext_resource path="res://menu/eq_menu/Slots.gd" type="Script" id=5]
+[ext_resource path="res://items/armours/armour1/rect10.png" type="Texture" id=6]
+[ext_resource path="res://items/armours/armour1/Armour1.gd" type="Script" id=7]
 
 [node name="EQMenu" type="Node"]
 script = ExtResource( 4 )
@@ -18,3 +20,18 @@ script = ExtResource( 5 )
 script = ExtResource( 1 )
 
 [node name="Armour1" parent="Items" instance=ExtResource( 3 )]
+
+[node name="Armour2" type="Node2D" parent="Items"]
+script = ExtResource( 7 )
+
+[node name="Texture" type="TextureRect" parent="Items/Armour2"]
+self_modulate = Color( 1, 0, 0, 1 )
+margin_right = 55.0
+margin_bottom = 55.0
+mouse_filter = 2
+mouse_default_cursor_shape = 6
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

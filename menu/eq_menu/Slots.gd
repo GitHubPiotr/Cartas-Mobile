@@ -1,17 +1,17 @@
 extends Node
 
+var item
 var slots = []
-
 # const 43 in gemae
 
 func _init():
-	for i in range(43): slots.append(false)
+	for i in range(43): slots.append(null)
 
-func fill_slot(slot_id):
-	slots[slot_id] = true
+func fill_slot(slot_id, item):
+	slots[slot_id] = item
 
 func clear_slot(slot_id):
-	slots[slot_id] = false
+	slots[slot_id] = null
 
-func is_filled_slot(slot_id):
+func get_content(slot_id):
 	return slots[slot_id]
