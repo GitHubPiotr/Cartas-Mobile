@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://menu/character_menu/EQPanel.tscn" type="PackedScene" id=1]
-[ext_resource path="res://menu/character_menu/CharacterPanel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://menu/character_menu/BagPanel.tscn" type="PackedScene" id=1]
+[ext_resource path="res://menu/character_menu/EQPanel.tscn" type="PackedScene" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
 
 [node name="Panel" type="ColorRect"]
 margin_right = 360.0
@@ -12,12 +14,23 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_top = 7.0
 margin_right = 360.0
 margin_bottom = 640.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CharacterPanel" parent="VBoxContainer" instance=ExtResource( 2 )]
+[node name="EQPanel" parent="VBoxContainer" instance=ExtResource( 2 )]
+margin_top = 0.0
+margin_bottom = 232.0
 
-[node name="EQPanel" parent="VBoxContainer" instance=ExtResource( 1 )]
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+margin_top = 236.0
+margin_right = 360.0
+margin_bottom = 240.0
+custom_styles/separator = SubResource( 1 )
+
+[node name="BagPanel" parent="VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 244.0
+margin_bottom = 628.0

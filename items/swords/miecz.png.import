@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/helmet.png-bf857f7bd2e4b99f95454c792dfaf2ef.stex"
+path="res://.import/miecz.png-793516132424c774efb565fbcb59cf86.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/character_menu/helmet.png"
-dest_files=[ "res://.import/helmet.png-bf857f7bd2e4b99f95454c792dfaf2ef.stex" ]
+source_file="res://items/swords/miecz.png"
+dest_files=[ "res://.import/miecz.png-793516132424c774efb565fbcb59cf86.stex" ]
 
 [params]
 

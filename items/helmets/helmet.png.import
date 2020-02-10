@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/miecz.png-81e4bad2465e752eff26bf5cda414789.stex"
+path="res://.import/helmet.png-ea8f6a7dad26f0e4e933a57ae4b63f47.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/character_menu/miecz.png"
-dest_files=[ "res://.import/miecz.png-81e4bad2465e752eff26bf5cda414789.stex" ]
+source_file="res://items/helmets/helmet.png"
+dest_files=[ "res://.import/helmet.png-ea8f6a7dad26f0e4e933a57ae4b63f47.stex" ]
 
 [params]
 

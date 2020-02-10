@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/boots.png-f1aadacc4d68b315239726ad961c7b2d.stex"
+path="res://.import/armour.png-8a3dfec8c3084a163b328df351aea242.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/character_menu/boots.png"
-dest_files=[ "res://.import/boots.png-f1aadacc4d68b315239726ad961c7b2d.stex" ]
+source_file="res://items/armours/armour2/armour.png"
+dest_files=[ "res://.import/armour.png-8a3dfec8c3084a163b328df351aea242.stex" ]
 
 [params]
 

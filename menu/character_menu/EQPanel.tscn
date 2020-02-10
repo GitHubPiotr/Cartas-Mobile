@@ -1,424 +1,152 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://menu/character_menu/GridContainer.gd" type="Script" id=1]
+[ext_resource path="res://menu/character_menu/EQGridContainer.gd" type="Script" id=1]
 
-[node name="EQPanel" type="VBoxContainer"]
-margin_top = 256.0
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0, 0, 0, 1 )
+
+[node name="EQPanel" type="CenterContainer"]
+margin_top = 5.0
 margin_right = 360.0
-margin_bottom = 640.0
-size_flags_vertical = 3
+margin_bottom = 252.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_right = 360.0
-margin_bottom = 25.0
-rect_min_size = Vector2( 0, 25 )
-
-[node name="Panel" type="Panel" parent="HBoxContainer"]
-margin_right = 178.0
-margin_bottom = 25.0
-size_flags_horizontal = 3
-
-[node name="Panel2" type="Panel" parent="HBoxContainer"]
-margin_left = 182.0
-margin_right = 360.0
-margin_bottom = 25.0
-size_flags_horizontal = 3
-
-[node name="CenterContainer" type="CenterContainer" parent="."]
-margin_top = 29.0
-margin_right = 360.0
-margin_bottom = 379.0
-
-[node name="GridContainer" type="GridContainer" parent="CenterContainer"]
-margin_left = 5.0
-margin_right = 355.0
-margin_bottom = 350.0
-columns = 6
+[node name="EQGridContainer" type="GridContainer" parent="."]
+margin_left = 64.0
+margin_top = 7.0
+margin_right = 296.0
+margin_bottom = 239.0
+columns = 4
 script = ExtResource( 1 )
-
-[node name="Panel" type="Panel" parent="CenterContainer/GridContainer"]
-margin_right = 55.0
-margin_bottom = 55.0
-rect_min_size = Vector2( 55, 55 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Panel2" type="Panel" parent="CenterContainer/GridContainer"]
+[node name="WeaponPanel" type="Panel" parent="EQGridContainer"]
+margin_right = 55.0
+margin_bottom = 55.0
+rect_min_size = Vector2( 55, 55 )
+
+[node name="HelmetPanel" type="Panel" parent="EQGridContainer"]
 margin_left = 59.0
 margin_right = 114.0
 margin_bottom = 55.0
 rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Panel3" type="Panel" parent="CenterContainer/GridContainer"]
+[node name="EmptyPanel" type="Panel" parent="EQGridContainer"]
 margin_left = 118.0
 margin_right = 173.0
 margin_bottom = 55.0
 rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+custom_styles/panel = SubResource( 1 )
 
-[node name="Panel4" type="Panel" parent="CenterContainer/GridContainer"]
+[node name="EmptyPanel2" type="Panel" parent="EQGridContainer"]
 margin_left = 177.0
 margin_right = 232.0
 margin_bottom = 55.0
 rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+custom_styles/panel = SubResource( 2 )
 
-[node name="Panel5" type="Panel" parent="CenterContainer/GridContainer"]
-margin_left = 236.0
-margin_right = 291.0
-margin_bottom = 55.0
-rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Panel6" type="Panel" parent="CenterContainer/GridContainer"]
-margin_left = 295.0
-margin_right = 350.0
-margin_bottom = 55.0
-rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Panel7" type="Panel" parent="CenterContainer/GridContainer"]
+[node name="WeaponPanel2" type="Panel" parent="EQGridContainer"]
 margin_top = 59.0
 margin_right = 55.0
 margin_bottom = 114.0
 rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Panel8" type="Panel" parent="CenterContainer/GridContainer"]
+[node name="ArmourPanel" type="Panel" parent="EQGridContainer"]
 margin_left = 59.0
 margin_top = 59.0
 margin_right = 114.0
 margin_bottom = 114.0
 rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Panel9" type="Panel" parent="CenterContainer/GridContainer"]
+[node name="ShieldPanel" type="Panel" parent="EQGridContainer"]
 margin_left = 118.0
 margin_top = 59.0
 margin_right = 173.0
 margin_bottom = 114.0
 rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Panel10" type="Panel" parent="CenterContainer/GridContainer"]
+[node name="NecklacePanel" type="Panel" parent="EQGridContainer"]
 margin_left = 177.0
 margin_top = 59.0
 margin_right = 232.0
 margin_bottom = 114.0
 rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Panel11" type="Panel" parent="CenterContainer/GridContainer"]
-margin_left = 236.0
-margin_top = 59.0
-margin_right = 291.0
-margin_bottom = 114.0
-rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Panel12" type="Panel" parent="CenterContainer/GridContainer"]
-margin_left = 295.0
-margin_top = 59.0
-margin_right = 350.0
-margin_bottom = 114.0
-rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Panel13" type="Panel" parent="CenterContainer/GridContainer"]
+[node name="EmptyPanel3" type="Panel" parent="EQGridContainer"]
+modulate = Color( 0, 0, 0, 1 )
 margin_top = 118.0
 margin_right = 55.0
 margin_bottom = 173.0
 rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+custom_styles/panel = SubResource( 3 )
 
-[node name="Panel14" type="Panel" parent="CenterContainer/GridContainer"]
+[node name="ArmourPanel2" type="Panel" parent="EQGridContainer"]
 margin_left = 59.0
 margin_top = 118.0
 margin_right = 114.0
 margin_bottom = 173.0
 rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Panel15" type="Panel" parent="CenterContainer/GridContainer"]
+[node name="BraceletPanel" type="Panel" parent="EQGridContainer"]
 margin_left = 118.0
 margin_top = 118.0
 margin_right = 173.0
 margin_bottom = 173.0
 rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Panel16" type="Panel" parent="CenterContainer/GridContainer"]
+[node name="EarringsPanel" type="Panel" parent="EQGridContainer"]
 margin_left = 177.0
 margin_top = 118.0
 margin_right = 232.0
 margin_bottom = 173.0
 rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Panel17" type="Panel" parent="CenterContainer/GridContainer"]
-margin_left = 236.0
-margin_top = 118.0
-margin_right = 291.0
-margin_bottom = 173.0
-rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Panel18" type="Panel" parent="CenterContainer/GridContainer"]
-margin_left = 295.0
-margin_top = 118.0
-margin_right = 350.0
-margin_bottom = 173.0
-rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Panel19" type="Panel" parent="CenterContainer/GridContainer"]
+[node name="EmptyPanel4" type="Panel" parent="EQGridContainer"]
 margin_top = 177.0
 margin_right = 55.0
 margin_bottom = 232.0
 rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+custom_styles/panel = SubResource( 4 )
 
-[node name="Panel20" type="Panel" parent="CenterContainer/GridContainer"]
+[node name="BootsPanel" type="Panel" parent="EQGridContainer"]
 margin_left = 59.0
 margin_top = 177.0
 margin_right = 114.0
 margin_bottom = 232.0
 rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Panel21" type="Panel" parent="CenterContainer/GridContainer"]
+[node name="EmptyPanel5" type="Panel" parent="EQGridContainer"]
 margin_left = 118.0
 margin_top = 177.0
 margin_right = 173.0
 margin_bottom = 232.0
 rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+custom_styles/panel = SubResource( 5 )
 
-[node name="Panel22" type="Panel" parent="CenterContainer/GridContainer"]
+[node name="EmptyPanel6" type="Panel" parent="EQGridContainer"]
 margin_left = 177.0
 margin_top = 177.0
 margin_right = 232.0
 margin_bottom = 232.0
 rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Panel23" type="Panel" parent="CenterContainer/GridContainer"]
-margin_left = 236.0
-margin_top = 177.0
-margin_right = 291.0
-margin_bottom = 232.0
-rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Panel24" type="Panel" parent="CenterContainer/GridContainer"]
-margin_left = 295.0
-margin_top = 177.0
-margin_right = 350.0
-margin_bottom = 232.0
-rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Panel25" type="Panel" parent="CenterContainer/GridContainer"]
-margin_top = 236.0
-margin_right = 55.0
-margin_bottom = 291.0
-rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Panel26" type="Panel" parent="CenterContainer/GridContainer"]
-margin_left = 59.0
-margin_top = 236.0
-margin_right = 114.0
-margin_bottom = 291.0
-rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Panel27" type="Panel" parent="CenterContainer/GridContainer"]
-margin_left = 118.0
-margin_top = 236.0
-margin_right = 173.0
-margin_bottom = 291.0
-rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Panel28" type="Panel" parent="CenterContainer/GridContainer"]
-margin_left = 177.0
-margin_top = 236.0
-margin_right = 232.0
-margin_bottom = 291.0
-rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Panel29" type="Panel" parent="CenterContainer/GridContainer"]
-margin_left = 236.0
-margin_top = 236.0
-margin_right = 291.0
-margin_bottom = 291.0
-rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Panel30" type="Panel" parent="CenterContainer/GridContainer"]
-margin_left = 295.0
-margin_top = 236.0
-margin_right = 350.0
-margin_bottom = 291.0
-rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Panel31" type="Panel" parent="CenterContainer/GridContainer"]
-margin_top = 295.0
-margin_right = 55.0
-margin_bottom = 350.0
-rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Panel32" type="Panel" parent="CenterContainer/GridContainer"]
-margin_left = 59.0
-margin_top = 295.0
-margin_right = 114.0
-margin_bottom = 350.0
-rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Panel33" type="Panel" parent="CenterContainer/GridContainer"]
-margin_left = 118.0
-margin_top = 295.0
-margin_right = 173.0
-margin_bottom = 350.0
-rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Panel34" type="Panel" parent="CenterContainer/GridContainer"]
-margin_left = 177.0
-margin_top = 295.0
-margin_right = 232.0
-margin_bottom = 350.0
-rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Panel35" type="Panel" parent="CenterContainer/GridContainer"]
-margin_left = 236.0
-margin_top = 295.0
-margin_right = 291.0
-margin_bottom = 350.0
-rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Panel36" type="Panel" parent="CenterContainer/GridContainer"]
-margin_left = 295.0
-margin_top = 295.0
-margin_right = 350.0
-margin_bottom = 350.0
-rect_min_size = Vector2( 55, 55 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel2" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 1 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel3" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 2 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel4" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel5" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel6" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel7" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel8" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel9" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel10" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel11" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel12" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel13" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel14" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel15" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel16" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel17" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel18" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel19" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel20" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel21" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel22" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel23" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel24" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel25" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel26" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel27" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel28" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel29" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel30" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel31" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel32" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel33" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel34" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel35" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
-[connection signal="gui_input" from="CenterContainer/GridContainer/Panel36" to="CenterContainer/GridContainer" method="_on_Panel_gui_input" binds= [ 0 ]]
+custom_styles/panel = SubResource( 6 )
+[connection signal="gui_input" from="EQGridContainer/WeaponPanel" to="EQGridContainer" method="_on_WeaponPanel_gui_input" binds= [ 0 ]]
+[connection signal="gui_input" from="EQGridContainer/WeaponPanel2" to="EQGridContainer" method="_on_WeaponPanel_gui_input" binds= [ 0 ]]
